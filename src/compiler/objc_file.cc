@@ -53,9 +53,11 @@ namespace google { namespace protobuf { namespace compiler {namespace objectivec
 
     if (file_->dependency_count() > 0) {
       for (int i = 0; i < file_->dependency_count(); i++) {
-        printer->Print(
-          "#import \"$header$.pb.h\"\n",
-          "header", FilePath(file_->dependency(i)));
+        string file_name = FilePath(file_->dependency(i));
+        if (file_name != "ObjectivecDescriptor") {
+          printer->Print("#import \"$header$.pb.h\"\n",
+                         "header", file_name);
+        }
       }
       printer->Print("\n");
     }
@@ -72,7 +74,7 @@ namespace google { namespace protobuf { namespace compiler {namespace objectivec
       "#ifndef __has_feature\n"
       "  #define __has_feature(x) 0 // Compatibility with non-clang compilers.\n"
       "#endif // __has_feature\n\n");
-    
+
     printer->Print(
       "#ifndef NS_RETURNS_NOT_RETAINED\n"
       "  #if __has_feature(attribute_ns_returns_not_retained)\n"
@@ -183,9 +185,11 @@ namespace google { namespace protobuf { namespace compiler {namespace objectivec
       "[self registerAllExtensions:registry];\n");
 
     for (int i = 0; i < file_->dependency_count(); i++) {
-      printer->Print(
-        "[$dependency$ registerAllExtensions:registry];\n",
-        "dependency", FileClassName(file_->dependency(i)));
+      string fileClass = FileClassName(file_->dependency(i));
+        if (fileClass != "ObjectivecDescriptorRoot") {
+          printer->Print("[$dependency$ registerAllExtensions:registry];\n",
+                         "dependency", fileClass);
+        }
     }
 
     printer->Print(

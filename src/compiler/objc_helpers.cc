@@ -191,6 +191,13 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
   string FileName(const FileDescriptor* file) {
     string basename;
 
+    // add file's prefix
+    if (file->options().HasExtension(objectivec_file_options)) {
+      ObjectiveCFileOptions options = file->options().GetExtension(objectivec_file_options);
+
+      basename = options.class_prefix();
+    }
+
     string::size_type last_slash = file->name().find_last_of('/');
     if (last_slash == string::npos) {
       basename += file->name();

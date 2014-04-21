@@ -33,6 +33,10 @@ message ObjectiveCFileOptions {
   // This will commonly be the capitalized letters from the above defined
   // 'objectivec_directory'
   optional string class_prefix = 2;
+
+  // The string to be prefixed in front of all classes
+  // ie. 'PB' for the 'myStruct.proto' will generated 'PBmyStruct.proto'
+  optional string file_name_prefix = 3;
 }
 
 extend google.protobuf.FileOptions {

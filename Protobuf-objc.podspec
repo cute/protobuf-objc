@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 Pod::Spec.new do |s|
   s.name         = "Protobuf-objc"
   s.version      = "0.0.1"
@@ -24,7 +23,7 @@ Pod::Spec.new do |s|
   }
   s.header_dir = "ProtocolBuffers"
   s.source_files = 'src/runtime/Classes/*.{h,m}'
-  s.xcconfig = { 'WARNING_CFLAGS' => '-Wno-missing-prototypes -Wno-format' }
+  s.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
   s.preserve_paths = 'README.md'
 
   s.platform     = :ios, '5.0'

@@ -12,6 +12,7 @@ This project is based on an implementation of Protocol Buffers from Google.  See
 # Credits
 
 - David Bonnefoy
+- Superbil
 
 Regwez Inc.
 -------------------------------------------------------------------------------

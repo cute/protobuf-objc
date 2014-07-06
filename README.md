@@ -9,6 +9,27 @@ This project is based on an implementation of Protocol Buffers from Google.  See
 [g-protobuf]: http://code.google.com/p/protobuf/
 [protobuf-objc]: https://github.com/booyah/protobuf-objc
 
+
+# Usage
+
+I use [homebrew](http://brew.sh/) to install it, you must install [homebrew](http://brew.sh/) first and use this commend.
+
+````
+brew install https://raw.githubusercontent.com/Superbil/protobuf-objc/master/protobuf-objc.rb
+````
+
+This will install protobuf and protobuf-objc compiler, after that you can use this command to compiler you `proto` file
+
+````
+protoc --objc_out objc Example.proto
+````
+  Because you want Objctive-C classes, you use the `--objc_out` option
+
+This generates the following files in your specified destination directory (objc):
+
+* `Example.pb.h`, the header which declares your generated classes.
+* `Example.pb.m`, which contains the implementation of your classes.
+
 # Credits
 
 - David Bonnefoy

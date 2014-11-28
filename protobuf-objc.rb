@@ -11,7 +11,7 @@ class ProtobufObjc < Formula
   depends_on :automake
   depends_on :libtool
 
-  depends_on 'protobuf'
+  depends_on 'protobuf250'
 
   def install
     ENV.prepend 'CXXFLAGS', '-DNDEBUG'

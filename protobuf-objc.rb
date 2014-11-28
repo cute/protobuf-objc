@@ -3,7 +3,7 @@ require 'formula'
 class ProtobufObjc < Formula
   homepage 'https://github.com/Superbil/protobuf-objc'
   url 'https://github.com/Superbil/protobuf-objc.git'
-  sha1 '7dcd0d77c5aeb706510d67d157793fd689ad4073'
+  sha1 '5655da9689e2fc1784d5cc5c770e5f4fb54a2bee'
 
   head 'https://github.com/Superbil/protobuf-objc.git', :branch => 'develop'
 
@@ -11,7 +11,7 @@ class ProtobufObjc < Formula
   depends_on :automake
   depends_on :libtool
 
-  depends_on 'protobuf'
+  depends_on 'protobuf250'
 
   def install
     ENV.prepend 'CXXFLAGS', '-DNDEBUG'

@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.source       = {
     :git => "https://github.com/Superbil/protobuf-objc.git",
-    :commit => "7dcd0d77c5aeb706510d67d157793fd689ad4073"
+    :commit => "4c4c419155da9c2705530ed2721595f7c8bd293a"
   }
   s.header_dir = "ProtocolBuffers"
   s.source_files = 'src/runtime/Classes/*.{h,m}'

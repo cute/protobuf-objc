@@ -15,7 +15,8 @@ This project is based on an implementation of Protocol Buffers from Google.  See
 I use [homebrew](http://brew.sh/) to install it, you must install [homebrew](http://brew.sh/) first and use this commend.
 
 ````
-brew install https://raw.githubusercontent.com/Superbil/protobuf-objc/master/protobuf-objc.rb
+brew tap superbil/protobuf
+brew install protobuf-objc
 ````
 
 This will install protobuf and protobuf-objc compiler, after that you can use this command to compiler you `proto` file

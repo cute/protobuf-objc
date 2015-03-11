@@ -10,8 +10,9 @@ Pod::Spec.new do |s|
                         This project is based on an implementation of Protocol Buffers from Google.
                         See the Google protobuf project for more information.
                       DESC
-  s.homepage     = "https://code.google.com/p/metasyntactic/wiki/ProtocolBuffers"
+  s.homepage     = "https://github.com/Superbil/protobuf-objc"
   s.license      = "Apache 2.0"
+  s.author       = { "Superbil" => "superbil@gmail.com" }
   s.author       = "David Bonnefoy"
   s.author       = { "Ragy Eleish" => "ragy@regwez.com" }
   s.author       = { "Jon Parise" => "jon@booyah.com" }

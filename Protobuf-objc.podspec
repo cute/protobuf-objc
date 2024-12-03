@@ -27,6 +27,8 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'WARNING_CFLAGS' => '$(inherited) -Wno-missing-prototypes -Wno-format' }
   s.preserve_paths = 'README.md'
 
-  s.platform     = :ios, '5.0'
+  s.ios.deployment_target = '5.0'
+  s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target   = '10.11'
   s.requires_arc = true
 end
